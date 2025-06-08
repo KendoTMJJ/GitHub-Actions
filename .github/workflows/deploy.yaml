@@ -16,3 +16,4 @@ jobs:
       - run: echo "Correr migraciones"
       - run: echo "Generar bianrio"
       - run: echo "Publicar versión"
+      - run: echo "Publicar versión en desarrollo"
