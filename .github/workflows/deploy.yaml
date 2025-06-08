@@ -7,7 +7,12 @@ on:
 jobs:
   deploy-codiguito:
     runs-on: ubuntu-latest                      #Tomamos una maquina virtual de github
+
     steps:                                      #Pasos necesarios para realizar el proceso 
+
+      uses: actions/checkout@v4                 #Se emplea para usar una acción predefinida, que es como un bloque de funcionalidad ya construida 
+                                                #por GitHub o la comunidad. Estas acciones ayudan a no tener que escribir todo desde cero.
+
       run: echo "Hacemos pull del código"       #echo en consola es como un "print"
       run: echo "Correr migraciones"
       run: echo "Generar bianrio"
