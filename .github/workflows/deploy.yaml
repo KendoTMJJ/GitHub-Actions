@@ -1,0 +1,14 @@
+name: "Deploy Codiguito"                        # Nombre del proceso que se quiere automarizar
+
+on:
+  push:
+    branches: ["main"]                          # Indicación de la rama en donde se va a ejecutar
+
+jobs:
+  deploy-codiguito:
+    runs-on: ubuntu-latest                      #Tomamos una maquina virtual de github
+    steps:                                      #Pasos necesarios para realizar el proceso 
+      run: echo "Hacemos pull del código"       #echo en consola es como un "print"
+      run: echo "Correr migraciones"
+      run: echo "Generar bianrio"
+      run: echo "Publicar versión"
