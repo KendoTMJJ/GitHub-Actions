@@ -1,19 +1,18 @@
-name: "Deploy Codiguito"                        # Nombre del proceso que se quiere automarizar
+name: "Deploy Codiguito" # Nombre del proceso que se quiere automarizar
 
 on:
   push:
-    branches: ["main"]                          # Indicación de la rama en donde se va a ejecutar
+    branches: ["main"] # Indicación de la rama en donde se va a ejecutar
 
 jobs:
   deploy-codiguito:
-    runs-on: ubuntu-latest                      #Tomamos una maquina virtual de github
+    runs-on: ubuntu-latest #Tomamos una maquina virtual de github
 
-    steps:                                      #Pasos necesarios para realizar el proceso 
+    steps: #Pasos necesarios para realizar el proceso
+      - uses: actions/checkout@v4 #Se emplea para usar una acción predefinida, que es como un bloque de funcionalidad ya construida
+        #por GitHub o la comunidad. Estas acciones ayudan a no tener que escribir todo desde cero.
 
-      uses: actions/checkout@v4                 #Se emplea para usar una acción predefinida, que es como un bloque de funcionalidad ya construida 
-                                                #por GitHub o la comunidad. Estas acciones ayudan a no tener que escribir todo desde cero.
-
-      run: echo "Hacemos pull del código"       #echo en consola es como un "print"
-      run: echo "Correr migraciones"
-      run: echo "Generar bianrio"
-      run: echo "Publicar versión"
+      - run: echo "Hacemos pull del código" #echo en consola es como un "print"
+      - run: echo "Correr migraciones"
+      - run: echo "Generar bianrio"
+      - run: echo "Publicar versión"
