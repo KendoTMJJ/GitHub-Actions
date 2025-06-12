@@ -13,7 +13,8 @@ jobs:
         run: echo "Hola Mundo"
 
   second_jobs:
-    needs: first_jobs
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: first_jobs #Permite hace secuenciales los jobs
 
     runs-on: ubuntu-latest
 
