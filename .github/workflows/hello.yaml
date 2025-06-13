@@ -13,8 +13,7 @@ jobs:
 
     steps:
       - name: Work dir
-        run: echo $GITHUB_OUTPUT
-
+        run: echo "my_variable=Hola Mundo" >> $GITHUB_OUTPUT
   second_jobs:
     if: ${{ github.ref == 'refs/heads/development' }}
     needs: first_jobs #Permite hace secuenciales los jobs
