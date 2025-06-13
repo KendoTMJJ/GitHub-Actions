@@ -32,4 +32,4 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: echo "${{salida}}"
+        run: echo "$salida"
