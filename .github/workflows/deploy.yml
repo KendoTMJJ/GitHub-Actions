@@ -38,6 +38,15 @@ jobs:
 
     needs: build
 
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment-pages.outputs.page_url }} #Aquí ponemos ese id
+
     steps:
-      - name: Deploy
-        run: echo "Deploy..."
+      - name: Deploy to GitHub Pages
+        id: deployment-pages # Importante
+        uses: actions/deploy-pages@v4
